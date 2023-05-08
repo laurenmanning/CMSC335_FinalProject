@@ -6,7 +6,7 @@ const app = express();  /* app is a request handler function */
 const portNumber = 5000; /* port number used must be the same used in formGet.html */
 const mongoSanitize = require('express-mongo-sanitize');
 
-require("dotenv").config({ path: path.resolve(__dirname, 'credentialsDontPost/.env') })  
+require("dotenv").config({ path: path.resolve(__dirname, '.env') })
 const pokeLookup = require("./pokemonAPI.js");
 const htmlStyle = require("./htmlStylize.js");
 const dataBase = require("./databaseFunctions.js");
