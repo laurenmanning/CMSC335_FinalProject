@@ -1,6 +1,6 @@
-const htmlStyle = require("./htmlStylize.cjs");
-const dataBase = require("./databaseFunctions.cjs");
-const pokeLookup = require("./pokemonAPI.cjs");
+const htmlStyle = require("./htmlStylize.js");
+const dataBase = require("./databaseFunctions.js");
+const pokeLookup = require("./pokemonAPI.js");
 
 class RatingEntry{
     #count;
