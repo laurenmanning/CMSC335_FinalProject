@@ -3,7 +3,7 @@ const express = require("express");   /* Accessing express module */
 const http = require('http');
 const bodyParser = require("body-parser");
 const app = express();  /* app is a request handler function */
-const portNumber = 5000; /* port number used must be the same used in formGet.html */
+const portNumber = process.env.PORT || 5000; /* port number used must be the same used in formGet.html */
 const mongoSanitize = require('express-mongo-sanitize');
 
 require("dotenv").config({ path: path.resolve(__dirname, '.env') })
@@ -37,8 +37,7 @@ app.get("/browse/:pokemon", async (request, response) => {
     if (pokeId > -1){
         const infoTable = await utils.createInfoTable(name)
         const ratingsTable = await utils.getIndivComments(name)
-        const sprite = await utils.getSpriteFromName(name);
-        const variables = {pokeName:name, infoTable:infoTable, ratingsTable:ratingsTable, sprite: sprite}
+        const variables = {pokeName:name, infoTable:infoTable, ratingsTable:ratingsTable }
         response.render("browseSpec", variables);
     } else {
         response.redirect("/viewratings")
