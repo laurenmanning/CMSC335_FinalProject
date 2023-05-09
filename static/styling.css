@@ -2,7 +2,31 @@ html {
     font-size: 14px;
 }
 
-h1 {
-    color: red;
+table, form {
+    border-width: 0.25rem;
+    border-color: blanchedalmond;
+    border-style: ridge;
 }
 
+form {
+    padding: 0.25rem;
+}
+
+h1 {
+    color: maroon;
+}
+
+.sprite {
+    width: 100%;
+}
+
+.sprite-box {
+    width: 10rem;
+    align-self: center;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+}
