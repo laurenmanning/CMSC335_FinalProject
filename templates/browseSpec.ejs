@@ -3,13 +3,16 @@
 
 <head>
 	<meta charset="utf-8" />
-	<link rel="stylesheet" href="styling.css" type="text/css">
+	<link rel="stylesheet" href="/styling.css" type="text/css">
 	<title>Rank That Pokemon!</title>
 </head>
 
 <body>
 	<h1>Information about <%- pokeName %></h1>
-	<div><%- infoTable %></div>
+	<div class="info-box">
+		<div class="sprite-box"><%- sprite %></div> <!-- sprite img uses the .sprite class-->
+		<div><%- infoTable %></div>
+	</div>
 	<hr>
 	<h1>Ratings for <%- pokeName %></h1>
 	<div><%- ratingsTable %></div>

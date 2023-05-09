@@ -108,4 +108,11 @@ async function getIndivComments(name){
     }
 }
 
-module.exports = {createRankingsList, createInfoTable, getIndivComments}
+async function getSpriteFromName(name) {
+    const technicalInfo = await pokeLookup.getInfoFromName(name);
+    const front_sprite = technicalInfo.sprites.front_default;
+    return `<img src="${front_sprite}" class="sprite">`;
+}
+
+
+module.exports = {createRankingsList, createInfoTable, getIndivComments, getSpriteFromName}
