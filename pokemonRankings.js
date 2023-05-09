@@ -37,7 +37,8 @@ app.get("/browse/:pokemon", async (request, response) => {
     if (pokeId > -1){
         const infoTable = await utils.createInfoTable(name)
         const ratingsTable = await utils.getIndivComments(name)
-        const variables = {pokeName:name, infoTable:infoTable, ratingsTable:ratingsTable }
+        const sprite = await utils.getSpriteFromName(name);
+        const variables = {pokeName:name, infoTable:infoTable, ratingsTable:ratingsTable, sprite: sprite}
         response.render("browseSpec", variables);
     } else {
         response.redirect("/viewratings")
