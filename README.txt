@@ -7,3 +7,5 @@ This is an app that allows users to rate various Pokemon. Users can also see bas
 APIs: https://pokeapi.co/docs/v2
 
 YT Link:
+
+Deployment link: https://cmsc335-final-project-4bk2.onrender.com/
